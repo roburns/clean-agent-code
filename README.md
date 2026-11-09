@@ -22,7 +22,7 @@ frameworks, and tools implement and verify them.
 Download or clone this repository into a separate local directory:
 
 ```sh
-git clone https://github.com/rburns629/clean-agent-code.git
+git clone https://github.com/roburns/clean-agent-code.git
 ```
 
 Review the documents before adopting them. The core working set is `AGENTS.md`,
