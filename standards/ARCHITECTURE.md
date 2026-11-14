@@ -42,6 +42,35 @@ Protect public contracts, including error behavior and serialization. Refactor i
 small verifiable steps; preserve compatibility or document an approved migration.
 Follow existing repository patterns unless evidence shows a concrete defect.
 
+## Change impact
+
+Before changing the name, signature, type, default, return value, error behavior,
+side effects, or meaning of a variable, parameter, function, field, or
+configuration key, find everything that depends on it. Do not rely on recall or on
+the files already open: search each time, across everything the thing is visible
+to. A local needs its function; an exported name needs the whole permitted
+codebase.
+
+Look for:
+
+- Callers, implementers, overrides, and subclasses, including other packages and
+  services in the repository.
+- Tests, fixtures, and mocks that encode the old behavior.
+- Uses a compiler cannot see: names in strings, reflection, templates, queries,
+  serialized or persisted data, configuration, environment variables, build and CI
+  scripts, generated code, and documentation.
+- Behavior callers assume without stating it: units, ordering, nullability,
+  defaults, mutation of arguments, and which errors can occur.
+
+Update every dependent in the same change, or keep the old behavior compatible.
+Treat a use outside the repository, or one the filesystem rules keep you from
+inspecting, as a public contract. When the affected set is larger than the request
+implies, stop and report it before editing.
+
+Report with the change: what was searched and how, the dependents found, and any
+left unchanged with the reason. A passing build or test run shows only that
+covered code still works; it does not replace the search.
+
 ## SOLID as decision guidance
 
 Single responsibility means cohesive reasons to change, not one method per class.

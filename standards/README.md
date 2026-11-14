@@ -5,7 +5,7 @@ This map travels with `standards/` so adopted links do not depend on a README.
 
 - [AGENTS.md](../AGENTS.md): agent behavior and mandatory filesystem safeguards.
 - [AUDIT.md](../AUDIT.md): independent, evidence-based codebase assessment.
-- [Architecture](ARCHITECTURE.md): design and dependency decisions.
+- [Architecture](ARCHITECTURE.md): design, dependency, and change-impact decisions.
 - [Security](SECURITY.md): secure development and agent risks.
 - [CLI operations](CLI_OPERATIONS.md): cloud, infrastructure, and Git/GitHub safety.
 - [Type safety](TYPE_SAFETY.md): reliable data contracts.

@@ -95,6 +95,9 @@ in their owning documents. Use the [context template](templates/PROJECT_CONTEXT.
 for project-specific facts. Choose the
 [simplest sufficient solution](standards/ARCHITECTURE.md#simplest-sufficient-solution):
 the smallest coherent change meeting the request without weakening security.
+Before changing existing names, signatures, or behavior,
+[trace the change's impact](standards/ARCHITECTURE.md#change-impact) and report
+what was searched.
 Use [quality gates](standards/QUALITY_GATES.md) to report actual verification,
 including failures, missing infrastructure, and residual risks. Do not claim tests
 ran when they did not or equate compilation with production readiness.
