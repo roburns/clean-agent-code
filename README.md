@@ -22,7 +22,7 @@ frameworks, and tools implement and verify them.
 Download or clone this repository into a separate local directory:
 
 ```sh
-git clone https://github.com/rburns629/clean-agent-code.git
+git clone https://github.com/roburns/clean-agent-code.git
 ```
 
 Review the documents before adopting them. The core working set is `AGENTS.md`,
@@ -59,6 +59,28 @@ the initial choices and their reasons. Include:
   configuration/value paths classified by their owners.
 - Exact check-only commands for formatting, linting, types, builds, and tests.
 - Test prerequisites, performance requirements, and known verification gaps.
+
+To start from a draft instead of a blank template, give your agent this prompt and
+review what it writes. For a new project with little code, tell it the intended
+stack, maturity, and deployment target first.
+
+```text
+Read AGENTS.md, standards/README.md, and templates/PROJECT_CONTEXT.md.
+Then inspect this repository and draft PROJECT_CONTEXT.md at the project root.
+
+Do not open protected contents or unknown value files: list the paths that look
+protected by name and ask me to classify them. Do not run project commands.
+
+Take conventions from representative source files, tests, build configuration,
+and CI. Record exact check commands from that configuration, not guesses. For
+each row, name the files it came from. Write "Unknown: ask owner" where the
+repository does not show the answer, and list those questions at the end.
+
+Create only PROJECT_CONTEXT.md. Do not modify existing files.
+```
+
+The draft is a starting point: correct it, answer its questions, and classify the
+paths it lists before relying on it.
 
 Complete relevant fields only. Mark unknowns instead of inventing requirements, and
 never include credentials or sensitive values. Resolve conflicts using the priority
